@@ -7,7 +7,7 @@
             "employeeAddress": "123 Main St", 
             "employeePhoneNumber": "555-0101", 
             "position": "Customer Service Representative",
-            "availabilty": true
+            "availability": true
         },
         {
             "id": 25,
@@ -16,7 +16,7 @@
              "employeeAddress": "456 Oak Ave", 
              "employeePhoneNumber": "555-0102", 
              "position": "Customer Service Representative",
-             "availabilty": true
+             "availability": true
             },
         {
             "id": 26,
@@ -25,7 +25,7 @@
              "employeeAddress": "789 Pine Rd", 
              "employeePhoneNumber": "555-0103", 
              "position": "Customer Service Representative",
-             "availabilty": false
+             "availability": false
             },
         {
             "id": 1,
