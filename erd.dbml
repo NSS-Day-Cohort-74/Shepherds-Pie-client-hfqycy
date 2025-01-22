@@ -1,0 +1,50 @@
+Table sizeOptions {
+    id int [pk]
+    size varchar
+    price int
+}
+Table cheeseOptions {
+    id int [pk]
+    type varchar
+}
+Table sauceOptions {
+    id int [pk]
+    type varchar
+}
+Table toppings {
+    id int [pk]
+    type varchar
+    price int
+}
+
+Table employees {
+    id int [pk]
+    name varchar
+    address varchar
+    email varchar
+    phoneNumber int
+    isAdmin boolean
+}
+Table orders {
+    id int [pk]
+    isDelivery boolean
+    dateTime date
+    tableNumber int 
+    tip boolean
+    delivererId int [ref: > employees.id]
+    employeeId int [ref: > employees.id]
+    cost int
+}
+Table orderPizzas {
+    id int [pk]
+    orderId int [ref: > orders.id]
+    pizzaSizeId int [ref: > sizeOptions.id]
+    cheeseOptionId int [ref: > cheeseOptions.id]
+    sauceOptionId int [ref: > sauceOptions.id]
+}
+Table orderToppings {
+    id int [pk]
+    orderPizzasId int [ref: > orderPizzas.id]
+    toppingId int [ref: > toppings.id]
+}
+
