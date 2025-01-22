@@ -1,13 +1,19 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import { Login } from "./components/auth/Login";
+import "./App.css"
+import { Routes, Route } from "react-router-dom"
+import { Authorized } from "./views/Authorized"
+import { ApplicationViews } from "./views/ApplicationViews"
 
-
-//useState()(REACT) = const [stateVariable, setterFunction], must pass in an initial value for useState("[], 0, '', boolean"), must be imported from REACT
-export const App = () => {
-  return (
+export const App = () => (
+  <>
     <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<></>} />
+      <Route path="*"
+        element={
+          <Authorized>
+            <ApplicationViews />
+          </Authorized>}
+      />
     </Routes>
-  );
-};
+
+  </>
+)
