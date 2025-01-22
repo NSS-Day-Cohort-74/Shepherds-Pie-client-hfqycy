@@ -1,4 +1,4 @@
-
+import { useEffect, useState } from "react"
 export const ApplicationViews = () => {
   const [user, setUser] = useState({})
   useEffect(() => {
