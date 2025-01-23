@@ -19,8 +19,8 @@ export const ViewAllEmployees = () => {
     <div className="employee-container">
       {AllEmployees.map((emp) => (
         // we need to add link each employee to their profile details
-        <Link to={`/employees/${emp.id}`}>
-          <div className="employee" key={emp?.id}>
+        <Link key={emp.id} to={`/employees/${emp.id}`}>
+          <div className="employee" >
             <section className="employee-name">{emp.name}</section>
             <section className="employee-position">{emp.position}</section>
             <section className="employee-phone">{emp.phoneNumber}</section>
