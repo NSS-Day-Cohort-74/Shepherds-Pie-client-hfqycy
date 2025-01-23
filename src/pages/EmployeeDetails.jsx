@@ -24,8 +24,9 @@ export const EmployeeDetails = () => {
   };
 
   const handleSaveChanges = () => {
-    updateEmployee({ ...employee })
-    window.alert("Employee updated")
+    updateEmployee({ ...employee }).then(() => {
+      window.alert("Employee updated")
+    })
 
   };
 
