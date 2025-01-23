@@ -60,7 +60,7 @@ export const NewOrder = ({ currentUser }) => {
         </label>
       )}
 
-      {/* Tip Checkbox */}
+      {/* Tip Checkbox
       <label className="form-label">
         Tip?
         <input
@@ -69,7 +69,7 @@ export const NewOrder = ({ currentUser }) => {
           checked={newOrder.tip}
           onChange={(e) => setNewOrder({ ...newOrder, tip: e.target.checked })}
         />
-      </label>
+      </label> */}
 
       <button className="btn btn-primary" onClick={handleCreateOrder}>
         Create Order
