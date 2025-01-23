@@ -9,7 +9,7 @@
 .employee {
   width: 100vw;
   padding: 2.5rem;
-  background-color: #3799c038;
+  background-color: #1f6d8b;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
@@ -23,4 +23,19 @@ a {
 /* Optional: Add hover styles */
 a:hover {
     text-decoration: underline; /* Adds underline back on hover, if desired */
+}
+
+#root {
+    background-color: rgba(34, 15, 201, 0.178);
+}
+
+.employee-name {
+    color: rgb(255, 255, 255);
+}
+
+.employee-position {
+    color: rgb(255, 255, 255);
+}
+.employee-phone {
+    color: rgb(255, 255, 255);
 }
