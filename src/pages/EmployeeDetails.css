@@ -21,12 +21,12 @@
   color: #333;
 }
 
-.employee-details-form .form-group {
+.form-group {
   margin-bottom: 1rem;
 }
 
 .employee-details-form .form-group h4 {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
 }
 
 .employee-details-form .form-group input {
