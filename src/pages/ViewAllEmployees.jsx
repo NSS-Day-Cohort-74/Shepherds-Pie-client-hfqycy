@@ -24,8 +24,6 @@ export const ViewAllEmployees = () => {
             <section className="employee-name">{emp.name}</section>
           </Link>
           <section className="employee-position">{emp.position}</section>
-          <section className="employee-email">{emp.email}</section>
-          <section className="employee-address">{emp.address}</section>
           <section className="employee-phone">{emp.phoneNumber}</section>
         </div>
       ))}
