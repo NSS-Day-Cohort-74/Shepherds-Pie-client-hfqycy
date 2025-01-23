@@ -22,7 +22,7 @@ export const ViewAllEmployees = () => {
         <div className="all-employees" key={emp?.id}>
           <Link to={`/employees/${emp.id}`}>
             <section className="employee-name">{emp.name}</section>
-          </Link>
+      </Link>
           <section className="employee-position">{emp.position}</section>
           <section className="employee-phone">{emp.phoneNumber}</section>
         </div>
