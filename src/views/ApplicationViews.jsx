@@ -3,6 +3,9 @@ import { Outlet, Route, Routes } from "react-router-dom"
 import { NavBar } from "../components/NavBar"
 import { ViewAllEmployees } from "../pages/ViewAllEmployees"
 import { EmployeeDetails } from "../pages/EmployeeDetails"
+import { AllOrders } from "../components/orders/AllOrders"
+
+
 export const ApplicationViews = () => {
   const [user, setUser] = useState({})
   useEffect(() => {
@@ -25,7 +28,7 @@ export const ApplicationViews = () => {
 
         </Route>
         <Route path="orders">
-          <Route index element={<>Orders</>} />
+          <Route index element={<AllOrders />} />
           <Route path=":orderId" element={<>Order Details</>} />
           <Route path="new" element={<>New Order</>} />
           <Route path="edit/:orderId" element={<>Edit order</>} />

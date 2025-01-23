@@ -7,7 +7,6 @@
       "address": "123 Main St",
       "phoneNumber": "555-0101",
       "position": "Customer Service Representative",
-      "isAdmin": true,
       "availability": true
     },
     {
@@ -15,7 +14,7 @@
       "name": "Sarah Jones",
       "email": "sarah@pizza.com",
       "address": "456 Oak Ave",
-      "phoneNumber": "555-0102",
+      "phoneNumber": "555-0112",
       "position": "Customer Service Representative",
       "availability": true
     },
