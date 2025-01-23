@@ -16,14 +16,14 @@ export const ViewAllEmployees = () => {
   }, []);
 
   return (
-    <div className="customers">
+    <div className="employees">
       {AllEmployees.map((emp) => (
         // we need to add link each employee to their profile details
         <Link className="all-employees" key={emp.id} to={`/employees/${emp.id}`}>
-          <div className="customer" >
-            <section className="customer-header">{emp.name}</section>
-            <section className="customer-info">{emp.position}</section>
-            <section className="customer-info">{emp.phoneNumber}</section>
+          <div className="employee" >
+            <section className="employee-header">{emp.name}</section>
+            <section className="employee-info">{emp.position}</section>
+            <section className="employee-info">{emp.phoneNumber}</section>
           </div>
         </Link>
       ))

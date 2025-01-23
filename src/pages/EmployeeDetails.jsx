@@ -30,23 +30,23 @@ export const EmployeeDetails = () => {
   }
 
   return (
-    <div className="customer customer-details">
-      <section className="customer">
-        <header className="customer-header">{employee.name}</header>
+    <div className="employee employee-details">
+      <section className="employee">
+        <header className="employee-header">{employee.name}</header>
         <div>
-          <span className="customer-info">Address: </span>
+          <span className="employee-info">Address: </span>
           <div>
             <input type="text" defaultValue={employee.address} onChange={handleInputChange} name="address" />
           </div>
         </div>
         <div>
-          <span className="customer-info">Email: </span>
+          <span className="employee-info">Email: </span>
           <div>
             <input type="text" defaultValue={employee.email} onChange={handleInputChange} name="email" />
           </div>
         </div>
         <div>
-          <span className="customer-info">Phone # </span>
+          <span className="employee-info">Phone # </span>
           <div>
             <input type="text" defaultValue={employee.phoneNumber} onChange={handleInputChange} name="phoneNumber" />
           </div>
