@@ -1,64 +1,67 @@
-.root {
-    background-color:rgba(24, 224, 224, 0.918);
+:root {
+  background-color: rgba(24, 224, 224, 0.918);
 }
+
 .all-employees {
-    
-    background-color: rgba(215, 250, 218, 0.589);
-    display: flex;
-    flex-direction: column;
-    row-gap: 100px;
-    flex-wrap: wrap;
-    
-    border-radius: 5%;
-    max-width: 21%;
-    min-width: 20%;
-    min-height: 200px;
-    margin: 5%;
-    padding: 1%;
-    margin-bottom: 5%;
-    overflow-wrap:anywhere;
-    
+
+  background-color: rgba(215, 250, 218, 0.589);
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  flex-wrap: wrap;
+
+  border-radius: 5%;
+  max-width: 21%;
+  min-width: 20%;
+  min-height: 200px;
+  margin: 5%;
+  padding: 1%;
+  margin-bottom: 5%;
+  overflow-wrap: anywhere;
+
 }
 
 .employee-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 10%;
-    
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10%;
+
 }
 
 .employee-address {
-    font-size: small;
+  font-size: small;
 }
 
 .employee-phone {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: smaller;
-    text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: smaller;
+  text-align: center;
 }
 
 .employee-email {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    flex-shrink: inherit;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  flex-shrink: inherit;
 }
 
 .employee-position {
-    font-size: large;
-    font-weight:300;
-    text-align: center;
+  font-size: large;
+  font-weight: 300;
+  text-align: center;
 }
 
 .employee-name {
-    font-style:italic;
-    text-align: center;
+  font-style: italic;
+  text-align: center;
 }
 
 .all-employees:hover {
-    border-color: red;
+  border-color: red;
 }
 
 a {
-    text-decoration: none; /* Removes underline */
-    color: inherit; /* Ensures it takes the parent color */
+  text-decoration: none;
+  /* Removes underline */
+  color: inherit;
+  /* Ensures it takes the parent color */
 }
