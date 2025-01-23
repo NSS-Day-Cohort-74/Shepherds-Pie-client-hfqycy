@@ -15,6 +15,15 @@
     margin: 3rem;
   }
 
+  .customer-details {
+    margin: 3rem 10rem 10rem 10rem;
+  }
+
+  .save-btn {
+    float: right;
+    background-color: var(--primary);
+  }
+
   .customer {
     background-color: var(--white);
     border: 1px solid var(--outline);

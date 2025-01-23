@@ -30,23 +30,32 @@ export const EmployeeDetails = () => {
   }
 
   return (
-    <div className="employee-details-container">
-      <div className="employee-details-form">
-        <h1>{employee.name}</h1>
-        <div className="form-group">
-          <h4>Address</h4>
-          <input type="text" defaultValue={employee.address} onChange={handleInputChange} name="address" />
+    <div className="customer customer-details">
+      <section className="customer">
+        <header className="customer-header">{employee.name}</header>
+        <div>
+          <span className="customer-info">Address: </span>
+          <div>
+            <input type="text" defaultValue={employee.address} onChange={handleInputChange} name="address" />
+          </div>
         </div>
-        <div className="form-group">
-          <h4>Email</h4>
-          <input type="text" defaultValue={employee.email} onChange={handleInputChange} name="email" />
+        <div>
+          <span className="customer-info">Email: </span>
+          <div>
+            <input type="text" defaultValue={employee.email} onChange={handleInputChange} name="email" />
+          </div>
         </div>
-        <div className="form-group">
-          <h4>Phone Number</h4>
-          <input type="text" defaultValue={employee.phoneNumber} onChange={handleInputChange} name="phoneNumber" />
+        <div>
+          <span className="customer-info">Phone # </span>
+          <div>
+            <input type="text" defaultValue={employee.phoneNumber} onChange={handleInputChange} name="phoneNumber" />
+          </div>
         </div>
-        <button onClick={handleSaveChanges}>Save Changes</button>
-      </div>
+        <button className="save-btn" onClick={handleSaveChanges}>Save Changes</button>
+      </section>
     </div>
+
+
   )
 }
+
