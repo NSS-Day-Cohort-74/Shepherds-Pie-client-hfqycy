@@ -19,6 +19,7 @@ export const EmployeeList = () => {
   return (
     <div className="employee-container">
       {AllEmployees.map((emp) => (
+        // we need to add link each employee to their profile details
         <div className="all-employees" key={emp.id}>
            
           <section className="employee-name">{emp.employeeName}</section>
@@ -27,7 +28,7 @@ export const EmployeeList = () => {
           <section className="employee-address">{emp.employeeAddress}</section>
           <section className="employee-phone">{emp.employeePhoneNumber}</section>
             
-            
+            {console.log(emp)}
         </div>
       ))}
     </div>
