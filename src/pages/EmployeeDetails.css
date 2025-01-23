@@ -1,0 +1,10 @@
+.employee-form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.employee-form {
+  display: flex;
+  flex-direction: column;
+}
