@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "peacock.color": "#ff3d00",
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#ab307e",
@@ -20,4 +21,7 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.remoteColor": "#832561"
+=======
+  "peacock.color": "#ff3d00"
+>>>>>>> Stashed changes
 }
