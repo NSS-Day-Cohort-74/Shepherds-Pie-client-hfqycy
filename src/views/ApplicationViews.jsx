@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Outlet, Route, Routes } from "react-router-dom"
 import { NavBar } from "../components/NavBar"
-import { ViewAllEmployees } from "../components/ViewAllEmployees"
+import { ViewAllEmployees } from "../pages/ViewAllEmployees"
 export const ApplicationViews = () => {
   const [user, setUser] = useState({})
   useEffect(() => {
