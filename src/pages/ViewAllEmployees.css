@@ -14,3 +14,13 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
 }
+
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures it takes the parent color */
+}
+
+/* Optional: Add hover styles */
+a:hover {
+    text-decoration: underline; /* Adds underline back on hover, if desired */
+}
