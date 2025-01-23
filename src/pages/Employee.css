@@ -1,0 +1,44 @@
+  .employees {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem;
+  }
+
+  .employees>* {
+    flex-basis: 31%;
+    margin: 0.5rem;
+  }
+
+  section.employee {
+    margin: 3rem;
+  }
+
+  .employee-details {
+    margin: 3rem 10rem 10rem 10rem;
+  }
+
+  .save-btn {
+    float: right;
+    background-color: var(--primary);
+  }
+
+  .employee {
+    background-color: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  .employee-info {
+    color: var(--info);
+    font-family: "Roboto", sans-serif;
+  }
+
+  .employee-header {
+    font-size: larger;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--primary);
+  }
