@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 export const getAllOrders = () => {
-	return fetch(`http://localhost:8088/orders`).then((res) => res.json());
+  return fetch(`http://localhost:8088/orders`).then((res) => res.json());
 };
-=======
+
 // Fetches all orders
 export const GetOrders = () =>
   fetch(
@@ -64,4 +63,3 @@ export const AddOrderTotalPrice = (orderId, orderObj) =>
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(orderObj),
   });
->>>>>>> 6063ac3 (v1 of orderServices and OrderDetails)
