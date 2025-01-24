@@ -20,3 +20,7 @@ export const getPizzaById = async (pizzaId) => {
     toppings: pizzaToppings.map((topping) => topping.topping),
   };
 };
+
+export const getPizzaByOrderId = async (orderId) => {
+  return await fetch(`http://localhost:8088/pizzas?id=${orderId}`).then((res) => res.json())
+}
