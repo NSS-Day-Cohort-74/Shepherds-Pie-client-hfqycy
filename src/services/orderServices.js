@@ -13,17 +13,18 @@ export const GetToppings = () =>
   fetch("http://localhost:8088/toppings").then((res) => res.json());
 
 // Creates a new order
-export const CreateNewOrder = (orderObj) =>
+export const CreateNewOrder = (orderObj) => {
   fetch("http://localhost:8088/orders", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(orderObj),
   }).then((res) => res.json());
+};
 
 // Fetches an order by ID
 export const GetOrderById = async (orderId) => {
   const response = await fetch(
-    `http://localhost:8088/orderPizzas?orderId=${orderId}&_expand=order&_expand=cheeseOption&_expand=pizzaSize&_expand=sauceOption`
+    `http://localhost:8088/pizzas?orderId=${orderId}&_expand=order&_expand=cheese&_expand=size&_expand=sauce`
   );
   return await response.json();
 };
@@ -31,7 +32,7 @@ export const GetOrderById = async (orderId) => {
 // Fetches toppings for any pizza by ID
 export const GetToppingsByPizzaId = (orderPizzaId) =>
   fetch(
-    `http://localhost:8088/orderToppings?orderPizzaId=${orderPizzaId}&_expand=topping`
+    `http://localhost:8088/pizzaToppings?pizzaId=${orderPizzaId}&_expand=topping`
   ).then((res) => res.json());
 
 // Assigns a deliverer to an order
