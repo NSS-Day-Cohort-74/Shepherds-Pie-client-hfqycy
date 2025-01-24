@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { Outlet, Route, Routes } from "react-router-dom"
 import { NavBar } from "../components/NavBar"
-import { ViewAllEmployees } from "../pages/ViewAllEmployees"
-import { EmployeeDetails } from "../pages/EmployeeDetails"
+import { ViewAllEmployees } from "../components/employees/ViewAllEmployees"
+import { EmployeeDetails } from "../components/employees/EmployeeDetails"
 import { AllOrders } from "../components/orders/AllOrders"
 
 
