@@ -18,7 +18,7 @@ return (
         <div className="order-container">
           {allOrders.map((orderObject) => (
             <div className="all-orders" key={orderObject?.id}>
-              <Link to={`/order/${orderObject.id}`}>
+              <Link to={`/orders/${orderObject.id}`}>
                 <section className="">Order# {orderObject.id}</section>
               </Link>
               <section className="order-info">Name: {orderObject.customerName}</section>

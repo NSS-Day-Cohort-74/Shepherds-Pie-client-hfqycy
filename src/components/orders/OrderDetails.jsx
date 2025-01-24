@@ -9,7 +9,8 @@ import {
   GetToppingsByPizzaId,
   GrabOrders,
 } from "../../services/orderServices";
-import { getEmployees } from "../../services/employeeServices";
+
+import { EmployeeService } from "../../services/EmployeeServices";
 
 // Order details state management component
 export const OrderDetails = ({ currentUser }) => {
@@ -29,7 +30,7 @@ export const OrderDetails = ({ currentUser }) => {
         setToppings(await GetToppingsByPizzaId(orderData[0].id));
       }
 
-      setEmployees(await GetEmployees());
+      EmployeeService().then((employeesArray) => setEmployees(employeesArray));
     };
 
     fetchData();
@@ -38,10 +39,10 @@ export const OrderDetails = ({ currentUser }) => {
   // This UseEffect calculates the cost of the order(total)
   useEffect(() => {
     if (!order) return;
-
+    
     const toppingCost = toppings.length * 0.5;
-    const deliveryCost = order.order?.isDelivery ? 5 : 0;
-    setTotalCost(order.pizzaSize?.price + toppingCost + deliveryCost);
+    const deliveryCost = order.order.orderType === "Delivery" ? 5 : 0;
+    setTotalCost(order.size.price + toppingCost + deliveryCost);
   }, [order, toppings]);
 
   // Event handler for order confirmation
@@ -54,17 +55,16 @@ export const OrderDetails = ({ currentUser }) => {
     <div className="container">
       <h3>Order# {order?.order?.id}</h3>
 
-      {order && (
+       
         <div className="pizza-choices">
-          <div>Size: {order.pizzaSize?.size}</div>
-          <div>Cheese: {order.cheeseOption?.type}</div>
-          <div>Sauce: {order.sauceOption?.type}</div>
+          <div>Size: {order?.size.name}</div>
+          <div>Cheese: {order?.cheese.name}</div>
+          <div>Sauce: {order?.sauce.name}</div>
           <div>
-            Toppings: {toppings.map((t) => t.topping.type).join(", ") || "None"}
+            Toppings: {toppings.map((t) => t.name) || "None"}
           </div>
           <div>Cost: ${totalCost.toFixed(2)}</div>
-        </div>
-      )}
+        </div>  
 
       <button
         className="btn btn-primary"
@@ -84,7 +84,7 @@ export const OrderDetails = ({ currentUser }) => {
         Cancel Order
       </button>
 
-      {currentUser.isAdmin && order?.order?.isDelivery && (
+      {currentUser?.isAdmin && order?.order?.isDelivery && (
         <>
           <label>Assign Deliverer</label>
           <select
