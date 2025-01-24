@@ -1,7 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
 
-{/*http://localhost:8088/pizzas?_expand=order&_expand=size&_expand=sauce&_expand=cheese&_embed=pizzaToppings&_expand=toppingId*/ }
 
 
 export const SalesReport = () => {
@@ -24,7 +23,7 @@ export const SalesReport = () => {
     setSelectedMonthPizzas(allPizzaData)
     setTimeout(getNumberOfOrders, 100)
     const sales = selectedMonthPizzas.reduce((acc, pizza) => acc + pizza.order.totalPrice, 0)
-    setTimeout(setTotalSales, 100)
+    setTimeout(setTotalSales(sales), 100)
   }, [allPizzaData])
   return (
     <div className="orders-container">
