@@ -5,6 +5,7 @@ import { ViewAllEmployees } from "../components/employees/ViewAllEmployees"
 import { EmployeeDetails } from "../components/employees/EmployeeDetails"
 import { AllOrders } from "../components/orders/AllOrders"
 import { OrderDetails } from "../components/orders/OrderDetails"
+import { PizzaForm } from "../components/Pizza/PizzaForm"
 
 
 export const ApplicationViews = () => {
@@ -31,6 +32,7 @@ export const ApplicationViews = () => {
         <Route path="orders">
           <Route index element={<AllOrders />} />
           <Route path=":orderId" element={<OrderDetails />} />
+          <Route path="add-pizza" element={<PizzaForm />} />
           <Route path="new" element={<>New Order</>} />
           <Route path="edit/:orderId" element={<>Edit order</>} />
 

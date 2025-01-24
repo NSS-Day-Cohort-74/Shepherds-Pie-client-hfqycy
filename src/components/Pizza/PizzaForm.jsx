@@ -8,9 +8,10 @@ import {
   getSizes,
   getToppings,
 } from "../../services/ingredientsService";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
-export const PizzaForm = ({ pizzaId, orderId }) => {
+export const PizzaForm = ({}) => {
+  // debugger
   const [sizes, setSizes] = useState([]);
   const [chosenSize, setChosenSize] = useState(0);
   const [sauces, setSauces] = useState([]);
@@ -19,9 +20,15 @@ export const PizzaForm = ({ pizzaId, orderId }) => {
   const [chosenCheese, setChosenCheese] = useState(0);
   const [toppings, setToppings] = useState([]);
   const [chosenTopping, setChosenTopping] = useState(0);
-  const { orderId } = useParams();
+  const [orderId, setOrderId] = useState(0);
   const navigate = useNavigate();
+  const location = useLocation();
 
+  useEffect(() => {
+    console.log("There is state: ", location.state.orderId);
+    setOrderId(location.state.orderId);
+    // console.log(orderId)
+  }, [location]);
   useEffect(() => {
     getSizes().then((sizesArray) => setSizes(sizesArray));
     getSauces().then((saucesArray) => setSauces(saucesArray));
@@ -68,6 +75,7 @@ export const PizzaForm = ({ pizzaId, orderId }) => {
           return (
             <option
               value={size.id}
+              key={size.id}
               onChange={(event) => {
                 setChosenSize(event.target.value);
               }}
@@ -83,6 +91,7 @@ export const PizzaForm = ({ pizzaId, orderId }) => {
           return (
             <option
               value={sauce.id}
+              key={sauce.id}
               onChange={(event) => {
                 setChosenSauce(event.target.value);
               }}
@@ -98,6 +107,7 @@ export const PizzaForm = ({ pizzaId, orderId }) => {
           return (
             <option
               value={cheese.id}
+              key={cheese.id}
               onChange={(event) => {
                 setChosenCheese(event.target.value);
               }}
@@ -109,15 +119,16 @@ export const PizzaForm = ({ pizzaId, orderId }) => {
       </select>
       {toppings.map((topping) => {
         return (
+          <div>
           <input
             type="checkbox"
             id={topping.id}
+            key={topping.id}
             onChange={(event) => {
               handleToppingChoice(event);
             }}
-          >
-            {topping.name}
-          </input>
+            /> {topping.name}
+            </div>
         );
       })}
       <button onClick={handleSavePizza}>Save Pizza to Order</button>

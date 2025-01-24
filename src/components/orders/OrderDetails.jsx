@@ -39,7 +39,7 @@ export const OrderDetails = ({ currentUser }) => {
   // This UseEffect calculates the cost of the order(total)
   useEffect(() => {
     if (!order) return;
-    
+
     const toppingCost = toppings.length * 0.5;
     const deliveryCost = order.order.orderType === "Delivery" ? 5 : 0;
     setTotalCost(order.size.price + toppingCost + deliveryCost);
@@ -55,20 +55,28 @@ export const OrderDetails = ({ currentUser }) => {
     <div className="container">
       <h3>Order# {order?.order?.id}</h3>
 
-       
-        <div className="pizza-choices">
-          <div>Size: {order?.size.name}</div>
-          <div>Cheese: {order?.cheese.name}</div>
-          <div>Sauce: {order?.sauce.name}</div>
-          <div>
-            Toppings: {toppings.map((t) => t.name) || "None"}
-          </div>
-          <div>Cost: ${totalCost.toFixed(2)}</div>
-        </div>  
+      <div className="pizza-choices">
+        <div>Size: {order?.size.name}</div>
+        <div>Cheese: {order?.cheese.name}</div>
+        <div>Sauce: {order?.sauce.name}</div>
+        <div>
+          Toppings:{" "}
+          {toppings.map((t) => {
+            {
+              return t.topping.name + " ";
+            }
+          })}
+        </div>
+        <div>Cost: ${totalCost.toFixed(2)}</div>
+      </div>
 
       <button
         className="btn btn-primary"
-        onClick={() => navigate(`/orders/${orderId}/add-pizza`)}
+        onClick={() =>
+          navigate(`/orders/add-pizza`, {
+            state: { type: "create", orderId: order.order.id },
+          })
+        }
       >
         Add Pizza
       </button>
