@@ -4,6 +4,7 @@ import { NavBar } from "../components/NavBar"
 import { ViewAllEmployees } from "../components/employees/ViewAllEmployees"
 import { EmployeeDetails } from "../components/employees/EmployeeDetails"
 import { AllOrders } from "../components/orders/AllOrders"
+import { SalesReport } from "../components/sales-report/SalesReport"
 import { OrderDetails } from "../components/orders/OrderDetails"
 import { PizzaForm } from "../components/Pizza/PizzaForm"
 
@@ -38,7 +39,7 @@ export const ApplicationViews = () => {
 
         </Route>
 
-        <Route path="sales-report" element={<>Sales report</>}></Route>
+        <Route path="sales-report" element={<SalesReport />} />
       </Route>
     </Routes >
   </>)
