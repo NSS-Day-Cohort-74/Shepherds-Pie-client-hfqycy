@@ -15,11 +15,11 @@ orders()
 }, []);
 
 return (
-        <div className="order-container">
+        <div className="orders">
           {allOrders.map((orderObject) => (
-            <div className="all-orders" key={orderObject?.id}>
+            <div className="order" key={orderObject?.id}>
               <Link to={`/orders/${orderObject.id}`}>
-                <section className="">Order# {orderObject.id}</section>
+                <section className="order-header">Order# {orderObject.id}</section>
               </Link>
               <section className="order-info">Name: {orderObject.customerName}</section>
               <section className="order-info">Status: {orderObject.status}</section>
