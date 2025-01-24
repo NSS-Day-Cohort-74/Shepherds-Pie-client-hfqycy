@@ -9,7 +9,7 @@ import {
   GetToppingsByPizzaId,
   GrabOrders,
 } from "../../services/orderServices";
-import { GetEmployees } from "../../services/employeeServices";
+import { getEmployees } from "../../services/employeeServices";
 
 // Order details state management component
 export const OrderDetails = ({ currentUser }) => {

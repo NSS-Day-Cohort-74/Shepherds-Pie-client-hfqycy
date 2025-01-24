@@ -21,7 +21,7 @@ export const NewOrder = ({ currentUser }) => {
       dateTime: new Date(),
       delivererId: null,
       employeeId: currentUser.id,
-      cost: null,
+      totalCost: null,
     });
 
     navigate(`/orders/${response.id}`);
