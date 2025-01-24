@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const SalesReport = () => {
   const [allPizzaData, setAllPizzaData] = useState([]);
   const [selectedMonthPizzas, setSelectedMonthPizzas] = useState([]);
-  const [selectedMonth, setSelectedMonth] = useState("");
+  const [selectedMonth, setSelectedMonth] = useState("2025-01");
   const [monthOrderNumber, setMonthOrderNumber] = useState(0);
   const [totalSales, setTotalSales] = useState(0);
 
@@ -48,6 +48,7 @@ export const SalesReport = () => {
       <div className="order">
         <div>
           <input
+            defaultValue={selectedMonth}
             onChange={({ target: { value } }) => {
               setSelectedMonth(value);
             }}
@@ -57,7 +58,7 @@ export const SalesReport = () => {
         <h1>Sales Report</h1>
         <h2>Orders this Month: {monthOrderNumber}</h2>
         <h2>Total Sales: ${totalSales.toFixed(2)}</h2>
-        <h2>Average Order Value: ${(totalSales / monthOrderNumber).toFixed(2)}</h2>
+        <h2>Average Order Value: ${totalSales ? (totalSales / monthOrderNumber).toFixed(2) : "0"} </h2>
         <p>day by day: todo</p>
       </div>
     </div>
