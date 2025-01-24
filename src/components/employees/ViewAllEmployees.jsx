@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getAllEmployees } from "../services/getAllEmployees";
+import { getAllEmployees } from "../../services/getAllEmployees";
 import "./Employee.css"
 
 export const ViewAllEmployees = () => {
