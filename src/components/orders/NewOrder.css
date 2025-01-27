@@ -1,0 +1,39 @@
+.new-order-container {
+  text-align: center;
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--outline);
+  border-radius: 10px;
+  background-color: var(--offWhite);
+  box-shadow: 2px 3px 8px lightgray;
+}
+
+.new-order-container h3 {
+  font-size: 2rem;
+}
+
+.new-order-container fieldset {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-check {
+  margin-left: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
+}

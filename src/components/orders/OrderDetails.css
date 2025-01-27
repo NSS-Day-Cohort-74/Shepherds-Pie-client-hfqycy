@@ -1,0 +1,40 @@
+.details-container {
+  text-align: center;
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.order-number {
+  font-size: 2rem;
+}
+
+.pizza-choices {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--outline);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  background-color: var(--offWhite);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.topping {
+  list-style: none;
+}
+
+.btn-secondary {
+  background-color: var(--gray);
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  margin: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--darkGray);
+}

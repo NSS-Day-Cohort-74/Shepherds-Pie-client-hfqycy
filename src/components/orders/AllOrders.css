@@ -1,0 +1,37 @@
+.orders {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem;
+  }
+
+  .orders>* {
+    flex-basis: 31%;
+    margin: 0.5rem;
+  }
+
+  .order {
+    background-color: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  .order:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary);
+  }
+
+  .order-info {
+    color: var(--info);
+    font-family: "Roboto", sans-serif;
+  }
+
+  .order-header {
+    font-size: larger;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--primary);
+  }
