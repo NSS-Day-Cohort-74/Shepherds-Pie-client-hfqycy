@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getAllPizzaData } from "../../services/getAllPizzaData";
 
 export const SalesReport = () => {
   const [allPizzaData, setAllPizzaData] = useState([]);
@@ -29,8 +30,7 @@ export const SalesReport = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8088/pizzas?_expand=order&_expand=size&_expand=sauce&_expand=cheese&_embed=pizzaToppings&_expand=toppingId")
-      .then(res => res.json())
+    getAllPizzaData()
       .then(data => setAllPizzaData(data));
   }, []);
 
@@ -47,21 +47,27 @@ export const SalesReport = () => {
     <div className="orders-container">
       <div className="order">
         <div>
-          <input
-            defaultValue={selectedMonth}
-            onChange={({ target: { value } }) => {
-              setSelectedMonth(value);
-            }}
-            type="month"
-          />
+          <div>
+            <input
+              defaultValue={selectedMonth}
+              onChange={({ target: { value } }) => {
+                setSelectedMonth(value);
+              }}
+              type="month"
+            />
+          </div>
+          <h1>Sales Report</h1>
+          <h2>Orders this Month: {monthOrderNumber}</h2>
+          <h2>Total Sales: ${totalSales.toFixed(2)}</h2>
+          <h2>Average Order Value: ${totalSales ? (totalSales / monthOrderNumber).toFixed(2) : "0"} </h2>
+          <p>day by day: todo</p>
         </div>
-        <h1>Sales Report</h1>
-        <h2>Orders this Month: {monthOrderNumber}</h2>
-        <h2>Total Sales: ${totalSales.toFixed(2)}</h2>
-        <h2>Average Order Value: ${totalSales ? (totalSales / monthOrderNumber).toFixed(2) : "0"} </h2>
-        <p>day by day: todo</p>
+        <div className="poplular-items-container">
+          poplular items: todo
+        </div>
       </div>
     </div>
+
   );
 };
 

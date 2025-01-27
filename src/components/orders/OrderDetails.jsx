@@ -10,7 +10,7 @@ import {
   GrabOrders,
 } from "../../services/orderServices";
 
-import { EmployeeService } from "../../services/EmployeeServices";
+import { employeeService } from "../../services/employeeServices";
 
 // Order details state management component
 export const OrderDetails = ({ currentUser }) => {
@@ -30,7 +30,7 @@ export const OrderDetails = ({ currentUser }) => {
         setToppings(await GetToppingsByPizzaId(orderData[0].id));
       }
 
-      EmployeeService().then((employeesArray) => setEmployees(employeesArray));
+      employeeService().then((employeesArray) => setEmployees(employeesArray));
     };
 
     fetchData();
