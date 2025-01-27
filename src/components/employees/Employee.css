@@ -31,6 +31,12 @@
     padding: 1rem;
   }
 
+  .employee:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary);
+  }
+
   .employee-info {
     color: var(--info);
     font-family: "Roboto", sans-serif;
