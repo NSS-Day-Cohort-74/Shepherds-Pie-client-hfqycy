@@ -14,17 +14,17 @@ export const NewOrder = ({ currentUser }) => {
   const navigate = useNavigate();
 
   // Event handler for order creation
-  const handleCreateOrder = async (e) => {
+  const handleCreateOrder = (e) => {
     e.preventDefault();
-    const response = await CreateNewOrder({
+    CreateNewOrder({
       ...newOrder,
       dateTime: new Date(),
       delivererId: null,
       employeeId: currentUser.id,
       totalCost: null,
-    });
-
-    navigate(`/orders/${response.id}`);
+    }).then((response) =>
+      navigate(`/orders/new/${response.id}`, { state: { orderId: response.id } })
+    )
   };
 
   return (

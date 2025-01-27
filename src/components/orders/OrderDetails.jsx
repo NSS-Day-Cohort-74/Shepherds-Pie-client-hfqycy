@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import {
   AddDeliverer,
   AddOrderTotalPrice,
@@ -18,7 +18,7 @@ export const OrderDetails = ({ currentUser }) => {
   const [toppings, setToppings] = useState([]);
   const [employees, setEmployees] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
-  const { orderId } = useParams();
+  const { orderId } = useParams()
   const navigate = useNavigate();
 
   useEffect(() => {

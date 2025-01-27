@@ -7,6 +7,7 @@ import { AllOrders } from "../components/orders/AllOrders"
 import { SalesReport } from "../components/sales-report/SalesReport"
 import { OrderDetails } from "../components/orders/OrderDetails"
 import { PizzaForm } from "../components/Pizza/PizzaForm"
+import { NewOrder } from "../components/orders/NewOrder"
 
 
 export const ApplicationViews = () => {
@@ -34,14 +35,14 @@ export const ApplicationViews = () => {
           <Route index element={<AllOrders />} />
           <Route path=":orderId" element={<OrderDetails />} />
           <Route path="add-pizza" element={<PizzaForm />} />
-          <Route path="new" element={<>New Order</>} />
-          <Route path="edit/:orderId" element={<>Edit order</>} />
+          <Route path="new" element={<NewOrder currentUser={user} />} />
+          <Route path="new/:orderId" element={<OrderDetails />} />
 
         </Route>
 
         <Route path="sales-report" element={<SalesReport />} />
       </Route>
-    </Routes >
+    </Routes>
   </>)
 
 }
